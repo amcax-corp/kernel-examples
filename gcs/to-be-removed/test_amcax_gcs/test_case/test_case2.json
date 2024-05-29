@@ -1,0 +1,13 @@
+{
+    "Entities":
+    [
+        {"Type":"Point","Handle":1,"X":50.974537,"Y":-67.761139},
+        {"Type":"Circle","Handle":2,"Center":1,"Radius":94.091998},
+        {"Type":"Point","Handle":3,"X":291.736603,"Y":-105.9963},
+        {"Type":"Cirlce","Handle":4,"Center":3,"Radius":88.008156}
+    ],
+    "Constraint":
+    [
+        {"ConstraintType":"CircleCircleTangentCons2D","Entity":[2,4],"VecSense":1}
+    ]
+}
