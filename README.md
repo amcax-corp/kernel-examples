@@ -1,6 +1,5 @@
 [![en-us](https://img.shields.io/badge/en-us-yellow.svg)](./README.md) [![中文-简体](https://img.shields.io/badge/%E4%B8%AD%E6%96%87-%E7%AE%80%E4%BD%93-red.svg)](./README.zh_cn.md)
 
-### Each example can be executed with the cmake command as follows:
 
 ### Each example can be executed with the cmake command as follows:
 
@@ -17,7 +16,7 @@
 
 #### 二、 Open the terminal
 
-	1. Switch to the example folder
+	1. Switch to the example folder for each module
 
 	2. mkdir build
 
@@ -25,15 +24,15 @@
 
 	4. cmake ..
 
-	5. cmake --build. --config release or cmake --build. --config debug
+	5. cmake --build . --config release or cmake --build . --config debug
 
-	6. cd.\Release\ or cd.\Debug\
+	6. cd .\Release\ or cd .\Debug\
 
-	7. ./test.exe
+	7. .\test.exe
 
 ##### example1 of part is used as an example
 
-1. Switch to the example folder
+1. Switch to the example1 folder
 
 <div align = center><img src="https://img2.imgtp.com/2024/05/27/7v5UZRHL.png" width="500" height="100"></div>
 

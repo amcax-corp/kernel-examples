@@ -58,4 +58,4 @@
 
 	1. Write the grid to the example4 file using PolyMeshIO::WriteMesh
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/15/k6I3Vr4h.png" width="300" height="300">
+<div align = center><img src="https://img2.imgtp.com/2024/05/28/p8kLp6hO.png" width="300" height="300">

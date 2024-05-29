@@ -15,7 +15,7 @@
 
 #### 二、打开终端
 
-	1. 切换到 example 文件夹下
+	1. 切换到每个模块对应的 example 文件夹下
 	
 	2. mkdir build
 	
@@ -27,11 +27,11 @@
 	
 	6. cd .\Release\ 或 cd .\Debug\
 	
-	7. ./test.exe
+	7. .\test.exe
 
 ##### 以下以 part 的 example1 为例
 
-1. 切换到 example 文件夹下
+1. 切换到 example1 文件夹下
 
 <div align = center><img src="https://img2.imgtp.com/2024/05/27/7v5UZRHL.png" width="500" height="100"></div>
 
