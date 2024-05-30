@@ -10,7 +10,7 @@
 
 3.将下载的 AMCAXKernel 包解压，然后添加其路径到 CMAKE_PREFIX_PATH 中
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/27/tauqcQGz.png" width="700" height="200"></div>
+<div align = left><img src="https://img2.imgtp.com/2024/05/27/tauqcQGz.png" width=50%; height=auto></div>
 
 
 #### 二、打开终端
@@ -33,33 +33,33 @@
 
 1. 切换到 example1 文件夹下
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/27/7v5UZRHL.png" width="500" height="100"></div>
+<div align = left><img src="https://img2.imgtp.com/2024/05/27/7v5UZRHL.png" width=45%; height=auto></div>
 
 2. mkdir build
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/27/eJtPm0k6.png" width="400" height="60"></div>
+<div align = left><img src="https://img2.imgtp.com/2024/05/27/eJtPm0k6.png" width=23%; height=auto></div>
 
 3. cd build
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/27/8s7yyzqm.png" width="400" height="60"></div>
+<div align = left><img src="https://img2.imgtp.com/2024/05/27/8s7yyzqm.png" width=22%; height=auto></div>
 
 4. cmake ..
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/27/8LjFXbIL.png" width="800" height="300"></div>
+<div align = left><img src="https://img2.imgtp.com/2024/05/27/8LjFXbIL.png" width=90%; height=auto></div>
 
 5. cmake --build . --config release
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/27/eLiGLMpv.png" width="500" height="160"></div>
+<div align = left><img src="https://img2.imgtp.com/2024/05/27/eLiGLMpv.png" width=40%; height=auto></div>
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/27/JcdHAjrA.png" width="400" height="120"></div>
+<div align = left><img src="https://img2.imgtp.com/2024/05/27/JcdHAjrA.png" width=19%; height=auto></div>
 
 6. cd .\Release\
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/27/94z4bZtl.png" width="400" height="60"></div>
+<div align = left><img src="https://img2.imgtp.com/2024/05/27/94z4bZtl.png" width=30%; height=auto></div>
 
 7. ./test.exe
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/27/MtxPq54H.png" width="400" height="200"></div>
+<div align = left><img src="https://img2.imgtp.com/2024/05/27/MtxPq54H.png" width=22%; height=auto></div>
 
 
 ​	
