@@ -14,4 +14,4 @@
 
 	4. Use AMCAX::STLTool::WriteShape class will topology graph generated a hex called part4 STL files.
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/10/R46nZjtD.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/eX5FPmIL81prNCY.png" width="300" height="300">

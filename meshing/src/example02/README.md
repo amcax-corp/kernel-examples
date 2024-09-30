@@ -37,10 +37,10 @@
 
 #### The following are the results of union, intersection, exclusior, and difference in order
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/23/4E13p88B.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/4TdxrM6DpyhNKIa.png" width="300" height="300">
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/23/gTaNhveA.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/VTIAUJF2pseyBkH.png" width="300" height="300">
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/23/3CtPRSIZ.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/HUPx1e9p3nSNvYt.png" width="300" height="300">
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/23/ePr23VTQ.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/Hmyep8arM9n5Ubg.png" width="300" height="300">

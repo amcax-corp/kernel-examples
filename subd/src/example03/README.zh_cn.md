@@ -44,5 +44,5 @@
 
 	1. 使用 PolyMeshIO::WriteMesh 将网格写入 example3 文件
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/15/RcrIL4j6.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/m91InhVoRZ7zqET.png" width="300" height="300">
 

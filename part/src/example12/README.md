@@ -114,4 +114,4 @@
 
 	1. Use AMCAX::STLTool::WriteShape class will topology graphics result generated a STL file called partSample.
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/11/GPTWfGiY.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/VCpYzmKed37tShQ.png" width="300" height="300">

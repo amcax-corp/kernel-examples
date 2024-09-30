@@ -13,4 +13,4 @@
 
 	4. Use AMCAX::STLTool::WriteShape class will topology graph generated a middleCylinder called part8 STL files.
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/10/DpqW75oj.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/y1bkn2rdAZt6YRe.png" width="300" height="300">

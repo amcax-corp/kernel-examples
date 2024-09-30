@@ -13,5 +13,5 @@
 
 	4. 使用 AMCAX::STLTool::WriteShape 类将拓扑图形 pipe3 生成一个名为 part9 的 stl 文件。
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/10/LLXHZTTP.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/rhc5HF9t4gvfM8m.png" width="300" height="300">
 

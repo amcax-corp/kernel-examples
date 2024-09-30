@@ -14,4 +14,4 @@
 
 	4. Use AMCAX::STLTool::WriteShape class will topology graphics face2 generated a STL file called part2.
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/10/Y8jByg40.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/eQE9rNm4WMJFAPi.png" width="300" height="300">

@@ -14,4 +14,4 @@
 	4.	使用 AMCAX::STLTool::WriteShape 类将拓扑图形 hexagonPrism 生成一个名为 part3 的 stl 文件。
 
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/10/XuNIdeAn.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/mDi7B3Qct8ukvAG.png" width="300" height="300">

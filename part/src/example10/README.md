@@ -13,4 +13,4 @@
 
 	4. Use AMCAX::STLTool::WriteShape class will topology graphics pipe4 generated a STL file caslled part10.
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/10/72WpaRMZ.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/r5kDHu8m2G31bLW.png" width="300" height="300">

@@ -72,4 +72,4 @@
 
 	3. Use ExportToOBJ under TMSplineMeshingIO to export the meshing results as part5 OBJ file
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/16/lMhoCCx1.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/zPfUN6bl7r4aqXY.png" width="300" height="300">

@@ -15,4 +15,4 @@
 
 	5. Use AMCAX: : STLTool::WriteShape class will topological surface f generated a STL file called part1.
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/10/lOAjyIY0.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/gWVwEbHC6D8uOXk.png" width="300" height="300">

@@ -26,10 +26,10 @@
 ##### 以下简化比率依次为 0.01, 0.1, 0.3, 0.6
 
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/23/rD4HtwaU.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/gbnRJVDNKGciHzo.png" width="300" height="300">
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/23/9qimxCQj.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/t6s3KQOxuiJb94E.png" width="300" height="300">
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/23/tDg2YitA.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/ap2BmQogE1hvblC.png" width="300" height="300">
 
-<div align = center><img src="https://img2.imgtp.com/2024/05/23/HAiTZfrv.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/IsJCGRnuAK2SqTM.png" width="300" height="300">

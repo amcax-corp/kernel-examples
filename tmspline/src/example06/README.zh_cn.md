@@ -82,4 +82,4 @@
 	
 	3. 使用 TMSplineMeshingIO 下的 ExportToOBJ 将网格化结果导出为 part6 的 OBJ 文件
 	
-<div align = center><img src="https://img2.imgtp.com/2024/05/16/CSXxUX0z.png" width="300" height="300">
+<div align = center><img src="https://s2.loli.net/2024/09/30/KN1Y7jXAxtElCmk.png" width="300" height="300">
