@@ -2,7 +2,7 @@
 #include <mesh/io/IOOptions.hpp>
 #include <mesh/io/OBJReader.hpp>
 #include <mesh/io/OBJWriter.hpp>
-#include "meshing1.h"
+#include "example06.h"
 
 using namespace  AMCAX::Meshing::Mesh;
 using namespace  AMCAX::Meshing::Remeshing;
