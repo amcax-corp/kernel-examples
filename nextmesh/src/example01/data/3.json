@@ -3,8 +3,8 @@
   "BoundaryLayer": [
     {
       "GrowthRate": 1.2,
-      "InitLayerHeight": 0.01,
-      "NLayers": 25,
+      "InitLayerHeight": 0.002,
+      "NLayers": 20,
       "DistributionType": "Separation",
       "SelectedEntities": [ 1, 8, 9 ],
       "EntityType": "Face"
@@ -13,11 +13,12 @@
   "MeshSize": [
     {
       "CurvatureFactor": 0.2,
-      "GrowthRate": 1.1,
-      "MaxSize": 5,
+      "GrowthRate": 1.3,
+      "MaxSize": 0.2,
       "MeshingDim": 1,
-      "MinSize": 1,
-      "SelectedEntities": [ 2, 3, 4, 5, 6, 7 ]
+      "MinSize": 0.1,
+      "ElementOrder": 1,
+      "SelectedEntities": [ 1, 2, 3, 4, 17, 18 ]
     },
     {
       "CurvatureFactor": 0.2,
@@ -31,7 +32,7 @@
     {
       "CurvatureFactor": 0.2,
       "GrowthRate": 1.1,
-      "MaxSize": 0.5,
+      "MaxSize": 5,
       "MeshingDim": 2,
       "MinSize": 0.1,
       "NarrowRegionResolution": 1,
@@ -48,5 +49,4 @@
     }
   ],
   "ThreadNum": 1
-}
-        
+}   
