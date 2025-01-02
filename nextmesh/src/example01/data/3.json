@@ -2,6 +2,30 @@
   "Distribution": [],
   "BoundaryLayer": [
     {
+      "DistributionType": "Separation",
+      "EntityType": "Edge",
+      "EFPairs": [
+        {
+          "E": 2,
+          "F": 7
+        },
+        {
+          "E": 17,
+          "F": 7
+        }
+      ],
+      "Basic": {
+        "GrowthRate": {
+          "Constant": 1.2
+        },
+        "InitLayerHeight": {
+          "Absolute": 0.002
+        },
+        "NLayers": 20,
+        "ProblematicAreasTreatment": "STOP"
+      }
+    },
+    {
       "GrowthRate": 1.2,
       "InitLayerHeight": 0.002,
       "NLayers": 20,
@@ -17,7 +41,6 @@
       "MaxSize": 0.2,
       "MeshingDim": 1,
       "MinSize": 0.1,
-      "ElementOrder": 1,
       "SelectedEntities": [ 1, 2, 3, 4, 17, 18 ]
     },
     {
@@ -26,7 +49,6 @@
       "MaxSize": 5,
       "MeshingDim": 2,
       "MinSize": 1,
-      "NarrowRegionResolution": 1,
       "SelectedEntities": [ 2, 3, 4, 5, 6, 7 ]
     },
     {
@@ -35,7 +57,6 @@
       "MaxSize": 5,
       "MeshingDim": 2,
       "MinSize": 0.1,
-      "NarrowRegionResolution": 1,
       "SelectedEntities": [ 1, 8, 9 ]
     },
     {
@@ -44,7 +65,6 @@
       "MaxSize": 5,
       "MeshingDim": 3,
       "MinSize": 1,
-      "NarrowRegionResolution": 1,
       "SelectedEntities": []
     }
   ],

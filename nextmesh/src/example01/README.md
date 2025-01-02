@@ -37,14 +37,26 @@
 
 The generated mesh model is shown in the figure:
 
-	1. JSON Example (corresponding import files are 1.stp and 1.json)
+	1. JSON Example (corresponding import files are qiuwotaojian.stp and mesh_para-mesh000.json)
 
 <div align = center><img src="https://s2.loli.net/2024/08/21/fgE13hGHXuNz29m.png" width="400" height="300"></div>
 
 	2. JSON Example - Planar Boundary Layer (corresponding import files are 2.step and 2.json)
 
-<div align = center><img src="https://s2.loli.net/2024/09/29/lamGrEMwyuhPvg8.png" width="300" height="250"></div>
+<div align = center><img src="https://s2.loli.net/2024/11/29/9J2T7fGjuOXQxMe.jpg" width="300" height="250"></div>
 
 	3. JSON Example - Spatial Boundary Layer (corresponding import files are 3.step and 3.json)
 
 <div align = center><img src="https://s2.loli.net/2024/09/29/hc1jrQLRWPH6s8J.png" width="300" height="250"></div>
+
+	4. JSON Example - Sweep mesh (corresponding import files are 4.step and 4.json)
+
+<div align = center><img src="https://s2.loli.net/2024/12/02/CKA3s8RZzM5ovu7.png" width="300" height="250"></div>
+
+	5. Json示例-Copy mesh（corresponding import files are 5.step and 5.json）
+
+<div align = center><img src="https://s2.loli.net/2024/12/31/PykwZ7qOGNxHR1l.png" width="300" height="250"></div>
+
+	6. Json示例-Multiple line mesh generation methods（corresponding import files are 6.step and 6.json）
+
+<div align = center><img src="https://s2.loli.net/2024/12/31/QEWeyAra2iJclK1.png" width="300" height="250"></div>

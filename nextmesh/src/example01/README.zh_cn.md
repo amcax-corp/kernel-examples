@@ -37,15 +37,27 @@
 
 生成的网格模型如下：
 
-	1. Json示例（对应的导入文件为1.stp和1.json） 
+	1. Json示例（对应的导入文件为qiuwotaojian.stp和mesh_para-mesh000.json） 
 
 <div align = center><img src="https://s2.loli.net/2024/08/21/fgE13hGHXuNz29m.png" width="400" height="300"></div>
 
 	2. Json示例-平面边界层（对应的导入文件为2.step和2.json）
 
-<div align = center><img src="https://s2.loli.net/2024/09/29/lamGrEMwyuhPvg8.png" width="300" height="250"></div>
+<div align = center><img src="https://s2.loli.net/2024/11/29/9J2T7fGjuOXQxMe.jpg" width="300" height="250"></div>
 
 	3. Json示例-空间边界层（对应的导入文件为3.step和3.json）
 
 <div align = center><img src="https://s2.loli.net/2024/09/29/hc1jrQLRWPH6s8J.png" width="300" height="250"></div>
+
+	4. Json示例-扫掠网格（对应的导入文件为4.step和4.json）
+
+<div align = center><img src="https://s2.loli.net/2024/12/02/CKA3s8RZzM5ovu7.png" width="300" height="250"></div>
+
+	5. Json示例-复制网格（对应的导入文件为5.step和5.json）
+
+<div align = center><img src="https://s2.loli.net/2024/12/31/PykwZ7qOGNxHR1l.png" width="300" height="250"></div>
+
+	6. Json示例-多种线网格剖分方式（对应的导入文件为6.step和6.json）
+
+<div align = center><img src="https://s2.loli.net/2024/12/31/QEWeyAra2iJclK1.png" width="300" height="250"></div>
 

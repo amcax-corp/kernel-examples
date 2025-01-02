@@ -1,0 +1,47 @@
+{
+  "Distribution": [
+    {
+      "EntityType": "Edge",
+      "SelectedEntities": [ 1 ],
+      "DistributionType": "NumberOfElements",
+      "NElement": 20
+    },
+    {
+      "EntityType": "Edge",
+      "SelectedEntities": [ 2 ],
+      "DistributionType": "Explicit",
+      "Orientation": "Forward",
+      "DistributionPara": [ 0.1, 0.3, 0.6, 0.8 ]
+    },
+    {
+      "EntityType": "Edge",
+      "SelectedEntities": [ 3 ],
+      "DistributionType": "Linear",
+      "Orientation": "Forward",
+      "Symmetric": true,
+      "NElement": 9,
+      "EndBeginElementRatio": 5
+    },
+    {
+      "EntityType": "Edge",
+      "SelectedEntities": [ 4 ],
+      "DistributionType": "Geometric",
+      "Orientation": "Forward",
+      "Symmetric": false,
+      "NElement": 9,
+      "EndBeginElementRatio": 5
+    }
+  ],
+
+  "MeshSize": [
+    {
+      "CurvatureFactor": 1,
+      "GrowthRate": 1.0,
+      "MaxSize": 0.5,
+      "MeshingDim": 2,
+      "MinSize": 0.1,
+      "SelectedEntities": [ 1 ]
+    }
+  ],
+  "ThreadNum": 1
+}

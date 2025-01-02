@@ -1,0 +1,21 @@
+{
+  "Sweep": [
+    {
+      "EntityType": "Face",
+      "Domain": 1,
+      "Source": [ 9 ],
+      "Target": [ 10 ]
+    }
+  ],
+  "MeshSize": [
+    {
+      "CurvatureFactor": 0.2,
+      "GrowthRate": 1.0,
+      "MaxSize": 1,
+      "MeshingDim": 3,
+      "MinSize": 0.1,
+      "SelectedEntities": []
+    }
+  ],
+  "ThreadNum": 1
+}

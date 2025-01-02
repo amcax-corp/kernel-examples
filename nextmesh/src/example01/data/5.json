@@ -1,0 +1,39 @@
+{
+  "Copy": [
+    {
+      "EntityType": "Face",
+      "Source": [ 43 ],
+      "Target": [ 47 ],
+      "EdgeCorrespondence": [
+        {
+          "Source": [ 172 ],
+          "Target": [ 184 ]
+        },
+        {
+          "Source": [ 171 ],
+          "Target": [ 183 ]
+        },
+        {
+          "Source": [ 173 ],
+          "Target": [ 185 ]
+        },
+        {
+          "Source": [ 165 ],
+          "Target": [ 177 ]
+        }
+      ]
+    }
+  ],
+
+  "MeshSize": [
+    {
+      "CurvatureFactor": 0,
+      "GrowthRate": 1.0,
+      "MaxSize": 3,
+      "MeshingDim": 2,
+      "MinSize": 1,
+      "SelectedEntities": [ 43 ]
+    }
+  ],
+  "ThreadNum": 1
+}
