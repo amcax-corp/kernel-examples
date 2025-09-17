@@ -7,9 +7,10 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(EXTERNAL_LIBS 
     AMCAXCommon
-    AMCAXMeshing
-    AMCAXPart
     AMCAXStep
+    AMCAXPart
+    AMCAXAF
+    AMCAXOCCTIO
 )
 
 file(GLOB files "*.cpp")
@@ -30,6 +31,7 @@ foreach(LIB ${EXTERNAL_LIBS})
             $<TARGET_FILE_DIR:test>
     )
 endforeach()
+
 
 if(MSVC)
   set_target_properties(test PROPERTIES VS_DEBUGGER_ENVIRONMENT "PATH=%PATH%;${AMCAXCommon_RUNTIME_DIR};${AMCAXPart_RUNTIME_DIR}")

@@ -35,7 +35,7 @@ void TestPipe() {
 	}
 
 
-	AMCAX::STEP::StepWriter writer("output.step");
+	AMCAX::STEP::STEPWriter writer("output.step");
 	writer.Init();
 	writer.WriteShape(MakeFace(circlePipe, 0.0));
 	writer.Done();

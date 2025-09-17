@@ -1,0 +1,30 @@
+{
+  "Pattern": [
+    {
+      "MeshingDim": 2,
+      "SelectedEntities": [ 1 ],
+      "Type": "Circle",
+      "Mode": "OGrid",
+      "Zones": 3
+    }
+  ],
+  "Distribution": [
+    {
+      "EntityType": "Edge",
+      "SelectedEntities": [ 1 ],
+      "DistributionType": "NumberOfElements",
+      "NElement": 64
+    }
+  ],
+  "MeshSize": [
+    {
+      "CurvatureFactor": 0.2,
+      "GrowthRate": 1.0,
+      "MaxSize": 2,
+      "ElementType": "Quad",
+      "MeshingDim": 2,
+      "MinSize": 1,
+      "SelectedEntities": [ 1 ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "MeshSize": [
+    {
+      "CurvatureFactor": 0.6,
+      "GrowthRate": 1.5,
+      "MaxSize": 0.5,
+      "MeshingDim": 2,
+      "MinSize": 0.1,
+      "ElementType": "Tri", 
+      "MeshingMethod": "AFT", 
+      "SelectedEntities": []
+    }
+  ],
+  "ThreadNum": 1
+}

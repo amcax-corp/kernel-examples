@@ -1,0 +1,150 @@
+{
+  "MeshSize": [
+    {
+      "MaxSize": 5,
+      "MinSize": 0.5,
+      "GrowthRate": 1.4,
+      "MeshingDim": 2,
+      "SelectedEntities": []
+    }
+  ],
+
+  "LocalSizeField": {
+    "BGField": 5,
+
+    "AutomaticField": {
+      "CurvatureFactor": 0.5,
+      "NarrowRegionResolution2D": 1.0,
+      "NarrowRegionResolution3D": 0.5,
+      "GrowthRate": 1.4,
+      "Tag": 1
+    },
+    "MinField": {
+        "SelectedFieldTags": [
+          4,
+          6,
+          7
+        ],
+        "Tag": 2
+    },
+    "MaxField": {
+        "SelectedFieldTags": [
+          4,
+          6,
+          7
+        ],
+        "Tag": 3
+    },
+    "BallField": [
+      {
+        "Center": [
+          11.0,
+          13.0,
+          15.5
+        ],
+        "Radius": 20.0,
+        "InterLocSize": 1,
+        "OutLocSize": 5,
+        "Thickness": 10,
+        "Tag": 4
+      },
+      {
+        "Center": [
+          11.0,
+          13.0,
+          15.5
+        ],
+        "Radius": 20.0,
+        "InterLocSize": 1,
+        "OutLocSize": 5,
+        "Thickness": 10,
+        "Tag": 5
+      }
+    ],
+    "BoxField": [
+      {
+        "MinPoint": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "MaxPoint": [
+          20.0,
+          20.0,
+          20.0
+        ],
+        "InterLocSize": 1.0,
+        "OutLocSize": 5,
+        "Thickness": 10,
+        "Tag": 6
+      }
+    ],
+    "CylinderField": [
+      {
+        "Center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "Radius": 20.0,
+        "InterLocSize": 1,
+        "OutLocSize": 5,
+        "Thickness": 10,
+        "Tag": 7
+      }
+    ],
+    "DistanceField": [
+      {
+        "SelectedVertexTags": [
+          0,
+          1,
+          2
+        ],
+        "SelectedEdgeTags": [
+          69,
+          73
+        ],
+        "SelectedFaceTags": [
+          20,
+          48
+        ],
+        "SelectedSolidTags": [],
+        "Tag": 8
+      }
+    ],
+    "ThresholdField": [
+      {
+        "MinDist": 5.0,
+        "MaxDist": 10.0,
+        "MaxSize": 5.0,
+        "MinSize": 1.0,
+        "SelectedFieldTag": 8,
+        "Tag": 9
+      }
+    ],
+    "RestrictField": [
+      {
+        "IsBoundary": true,
+       "SelectedVertexTags": [
+          0,
+          1,
+          2
+        ],
+        "SelectedEdgeTags": [
+          73
+        ],
+        "SelectedFaceTags": [
+          20
+        ],
+        "SelectedSolidTags": [],
+        "SelectedFieldTag": 8,
+        "Tag": 10
+      }
+    ]
+  }
+}

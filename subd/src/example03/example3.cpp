@@ -7,6 +7,7 @@
 #include <polymeshAPI/MeshTransform.hpp>
 #include <common/AxisT.hpp>
 #include <polymeshAPI/MeshReduce.hpp>
+#include<common/Constants.hpp>
 
 using namespace AMCAX;
 using namespace SubD;
@@ -31,7 +32,7 @@ int main()
 	trsfF.SetTransformation(trsfMove);
 	trsfF.TransformMeshFaces(mesh, face_id_new);
 	Transformation3 trsfRot;
-	trsfRot.SetRotation(Axis3(Point3(1.5, 1.5, 0.), Direction3(0., 0., 1.)), M_PI / 4);
+	trsfRot.SetRotation(Axis3(Point3(1.5, 1.5, 0.), Direction3(0., 0., 1.)), AMCAX::Constants::pi / 4);
 	trsfF.SetTransformation(trsfRot);
 	trsfF.TransformMeshFaces(mesh, face_id_new);
 

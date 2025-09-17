@@ -1,0 +1,37 @@
+{
+  "BoundaryLayer": [
+    {
+      "DistributionType": "Separation",
+      "EntityType": "Edge",
+      "EFPairs": [
+        {
+          "E": 25,
+          "F": 3
+        }
+      ],
+      "Basic": {
+        "InitLayerHeight": {
+          "Absolute": 0.1
+        },
+        "GrowthRate": {
+          "Constant": 1.5
+        },
+        "NLayers": 3,
+        "AdditionalOuterLayers": 2,
+        "LastAspect": 0.8,
+        "ProblematicAreasTreatment": "COLLAPSE"
+      }
+    }
+  ],
+  "MeshSize": [
+    {
+      "CurvatureFactor": 0.2,
+      "GrowthRate": 1.1,
+      "MaxSize": 0.85,
+      "MinSize": 0.1,
+      "MeshingDim": 2,
+      "SelectedEntities": []
+    }
+  ],
+  "ThreadNum": 1
+}

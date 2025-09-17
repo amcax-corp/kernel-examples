@@ -64,17 +64,11 @@
 
 ### 4. Generate the step file
 
-	1. Convert Geom3BSplineSurface to TopoShape using MakeFace() under AMCAX::MakeFace
+	1. Use MakeFace() under AMCAX::MakeFace to convert Geom3BSplineSurface to TopoShape
 	
-	2. Perform a Boolean fusion operation using BoolBRepFuse() under AMCAX::BoolBRepFuse to merge the three shapes into one
+	2. Use SewShape() under AMCAX::MakeShapeTool to merge the three shapes into one
 	
-	3. Use AMCAX::STEP::StepWriter to convert the TopoShape object into a STEP file
-	
-	4. Write the header of the STEP file to the stream using Init() under AMCAX::STEP::StepWriter
-	
-	5. Use the WriteShape() under AMCAX::STEP::StepWriter to write the data part of the STEP file
-	
-	6. Use Done() in AMCAX::STEP::StepWriter to write the end of the STEP file and close the output file
+	3. Use Write() under AMCAX::STEP::STEPTool to write the shape to a file
 
 
 

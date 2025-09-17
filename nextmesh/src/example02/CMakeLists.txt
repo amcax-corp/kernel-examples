@@ -9,7 +9,7 @@ set(EXTERNAL_LIBS
     AMCAXCommon
     AMCAXMeshing
     AMCAXPart
-    AMCAXStep
+    AMCAXOCCTIO
     AMCAXNextMesh
 )
 

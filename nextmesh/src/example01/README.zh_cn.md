@@ -2,11 +2,11 @@
 
 [![en-us](https://img.shields.io/badge/en-us-yellow.svg)](./README.md) [![中文-简体](https://img.shields.io/badge/%E4%B8%AD%E6%96%87-%E7%AE%80%E4%BD%93-red.svg)](./README.zh_cn.md)
 
-### 该示例展示使用网格剖分的基本用法，导入step格式文件，通过json文件传入网格剖分控制参数，自动生成体网格。具体实现如下：
+### 该示例展示使用网格剖分的基本用法，导入brep格式文件，通过json文件传入网格剖分控制参数，自动生成体网格。具体实现如下：
 
 	1. 使用 AMCAX::NextMesh::NMAPIModel 下的 InitLogger() 配置 log 格式
 	
-	2. 使用 AMCAX::NextMesh::NMAPIModel 下的 ImportModel() 导入 cad 文件，新建模型
+	2. 使用 AMCAX::NextMesh::NMAPIModel 下的 ImportModel() 导入 TopoShape
 	
 	3. 使用 AMCAX::NextMesh::NMAPIModel 下的 GenerateMesh() 根据json字符（网格生成控制参数），生成网格
 	
@@ -37,27 +37,37 @@
 
 生成的网格模型如下：
 
-	1. Json示例（对应的导入文件为qiuwotaojian.stp和mesh_para-mesh000.json） 
+	1. Json示例（对应的导入文件为 qiuwotaojian.brep 和 mesh_para-mesh000.json） 
 
 <div align = center><img src="https://s2.loli.net/2024/08/21/fgE13hGHXuNz29m.png" width="400" height="300"></div>
 
-	2. Json示例-平面边界层（对应的导入文件为2.step和2.json）
+	2. Json示例-平面边界层（对应的导入文件为2.brep和2.json）
 
-<div align = center><img src="https://s2.loli.net/2024/11/29/9J2T7fGjuOXQxMe.jpg" width="300" height="250"></div>
+<div align = center><img src="https://s2.loli.net/2025/02/27/U6oPpzBthW2aDSu.png" width="300" height="250"></div>
 
-	3. Json示例-空间边界层（对应的导入文件为3.step和3.json）
+	3. Json示例-空间边界层（对应的导入文件为3.brep和3.json）
 
-<div align = center><img src="https://s2.loli.net/2024/09/29/hc1jrQLRWPH6s8J.png" width="300" height="250"></div>
+<div align = center><img src="https://s2.loli.net/2025/02/27/mp8Y2gZHB1heKa7.jpg" width="300" height="250"></div>
 
-	4. Json示例-扫掠网格（对应的导入文件为4.step和4.json）
+	4. Json示例-扫掠网格（对应的导入文件为4.brep和4.json）
 
 <div align = center><img src="https://s2.loli.net/2024/12/02/CKA3s8RZzM5ovu7.png" width="300" height="250"></div>
 
-	5. Json示例-复制网格（对应的导入文件为5.step和5.json）
+	5. Json示例-复制网格（对应的导入文件为5.brep和5.json）
 
 <div align = center><img src="https://s2.loli.net/2024/12/31/PykwZ7qOGNxHR1l.png" width="300" height="250"></div>
 
-	6. Json示例-多种线网格剖分方式（对应的导入文件为6.step和6.json）
+	6. Json示例-多种线网格剖分方式（对应的导入文件为6.brep和6.json）
 
 <div align = center><img src="https://s2.loli.net/2024/12/31/QEWeyAra2iJclK1.png" width="300" height="250"></div>
+
+
+	7. Json示例-高阶网格（对应的导入文件为7.brep和7.json）
+
+<div align = center><img src="https://s2.loli.net/2025/03/28/WMR9DbmFOUrspwf.png" width="300" height="250"></div>
+
+
+	8. Json示例-模板网格（对应的导入文件为8.brep和8.json）
+
+<div align = center><img src="https://s2.loli.net/2025/09/10/ElXy5PgkpvI4mcD.png" width="300" height="250"></div>
 

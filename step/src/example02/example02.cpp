@@ -1,58 +1,34 @@
-﻿#include <step/mesh/StepMeshReader.hpp>
-#include <iostream>
-#include <common/IndexSet.hpp>
-#include <topology/TopoExplorerTool.hpp>
-#include "example02.h"
-#include <step/mesh/StepMesh.hpp>
+﻿#include <iostream>
 #include <vector>
-#include <topomesh/BRepMeshIncrementalMesh.hpp>
+#include <common/IndexSet.hpp>
 #include <modeling/MakeShapeTool.hpp>
 #include <mesh/io/STLWriter.hpp>
 #include <mesh/io/IOOptions.hpp>
+#include <topology/TopoExplorerTool.hpp>
+#include <topomesh/BRepMeshIncrementalMesh.hpp>
+#include <step/mesh/STEPMeshReader.hpp>
+#include <step/mesh/STEPMesh.hpp>
+#include <step/STEPTool.hpp>
 
-
-template<typename Traits>
-std::shared_ptr<AMCAX::STEP::StepMeshData<Traits>>
-_ApplyTrsfInplace(std::shared_ptr<AMCAX::STEP::StepMeshData<Traits>>& orig, std::vector<AMCAX::TopoLocation>& trsfStack)
-{
-	trsfStack.push_back(orig->Transformation());
-	for (auto& shape : orig->Shapes())
-	{
-		for (auto revit = trsfStack.rbegin(); revit != trsfStack.rend(); ++revit)
-		{
-			shape.Move(*revit);
-		}
-	}
-	for (auto& child : orig->Children())
-	{
-		_ApplyTrsfInplace<Traits>(child, trsfStack);
-	}
-	trsfStack.pop_back();
-	orig->Transformation() = AMCAX::TopoLocation();
-	return orig;
-}
 int main()
 {
 	const std::string INPUT = "./data/bed214T.step";
 	using TriSoupTraits = AMCAX::Meshing::Mesh::TriSoupTraits_Coord;
 	using Points = typename TriSoupTraits::Points;
 	using Triangles = typename TriSoupTraits::Triangles;
-	using MeshReader = AMCAX::STEP::StepMeshReader<TriSoupTraits>;
-	using MeshDataList = AMCAX::STEP::StepMeshDataList<TriSoupTraits>;
+	using MeshReader = AMCAX::STEP::STEPMeshReader<TriSoupTraits>;
+	using MeshDataList = std::vector<std::shared_ptr<AMCAX::STEP::STEPMeshProduct<TriSoupTraits>>>;
 	using MeshDataPtr = MeshDataList::value_type;
+
 	MeshReader reader(INPUT);
 	reader.Read();
-	auto& shapes = reader.GetShapes();
-	for (auto& shape : shapes)
-	{
-		std::vector<AMCAX::TopoLocation> trsfStack;
-		_ApplyTrsfInplace<TriSoupTraits>(shape, trsfStack);
-	}
+	auto& shapes = reader.GetProducts();
+	AMCAX::STEP::STEPTool::ApplyTrsfInplace(shapes);
 	reader.ToMesh();
-	std::vector<std::vector<AMCAX::STEP::StepMesh<TriSoupTraits>>> meshes;
+	std::vector<std::vector<AMCAX::STEP::STEPMesh<TriSoupTraits>>> meshes;
 	std::function<void(
-		std::shared_ptr<AMCAX::STEP::StepMeshData<TriSoupTraits>>&)>
-		func = [&](std::shared_ptr<AMCAX::STEP::StepMeshData<TriSoupTraits>>& meshdata)
+		const std::shared_ptr<AMCAX::STEP::STEPMeshProduct<TriSoupTraits>>&)>
+		func = [&](const std::shared_ptr<AMCAX::STEP::STEPMeshProduct<TriSoupTraits>>& meshdata)
 		{
 			for (const auto& cur : meshdata->Meshes())
 			{

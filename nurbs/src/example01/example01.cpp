@@ -9,7 +9,6 @@
 #include <geometry/Geom3BSplineSurface.hpp>
 #include <geometry/Geom3Ellipse.hpp>
 #include <nurbs/NURBSAPISweep.hpp>
-#include <geometry/Geom3BSplineSurface.hpp>
 
 
 using namespace AMCAX;
@@ -43,7 +42,7 @@ void TestPipe()
 
 
 
-	AMCAX::STEP::StepWriter writer("output.step");
+	AMCAX::STEP::STEPWriter writer("output.step");
 	writer.Init();
 	writer.WriteShape(MakeFace(sweptSurfaces[0], 0.0));
 	writer.Done();

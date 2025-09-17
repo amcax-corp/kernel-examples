@@ -1,0 +1,64 @@
+{
+  "Distribution": [],
+  "BoundaryLayer": [
+    {
+      "DistributionType": "Separation",
+      "EntityType": "Face",
+      "FSPairs": [
+        {
+          "F": 1,
+          "S": 1
+        },
+        {
+          "F": 2,
+          "S": 1
+        },
+        {
+          "F": 3,
+          "S": 1
+        },
+        {
+          "F": 4,
+          "S": 1
+        },
+        {
+          "F": 5,
+          "S": 1
+        },
+        {
+          "F": 6,
+          "S": 1
+        }
+      ],
+      "Basic": {
+        "InitLayerHeight": {
+          "Aspect": 0.1
+        },
+        "GrowthRate": {
+          "Constant": 1.1
+        },
+        "NLayers": 3,
+        "ProblematicAreasTreatment": "STOP"
+      }
+    }
+  ],
+  "MeshSize": [
+    {
+      "CurvatureFactor": 0.2,
+      "GrowthRate": 1.1,
+      "MaxSize": 1,
+      "MinSize": 0.1,
+      "MeshingDim": 2,
+      "SelectedEntities": []
+    },
+    {
+      "CurvatureFactor": 0.2,
+      "GrowthRate": 1.1,
+      "MaxSize": 1,
+      "MinSize": 0.1,
+      "MeshingDim": 3,
+      "SelectedEntities": []
+    }
+  ],
+  "ThreadNum": 1
+}

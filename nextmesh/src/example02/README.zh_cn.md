@@ -2,11 +2,11 @@
 
 [![en-us](https://img.shields.io/badge/en-us-yellow.svg)](./README.md) [![中文-简体](https://img.shields.io/badge/%E4%B8%AD%E6%96%87-%E7%AE%80%E4%BD%93-red.svg)](./README.zh_cn.md)
 
-### 该示例展示使用网格剖分的二维边界层的详细配置方法，导入step格式文件，通过json文件传入网格剖分控制参数，自动生成网格。具体实现如下：
+### 该示例展示使用网格剖分的二维边界层的详细配置方法，导入brep格式文件，通过json文件传入网格剖分控制参数，自动生成网格。具体实现如下：
 
 	1. 使用 AMCAX::NextMesh::NMAPIModel 下的 InitLogger() 配置 log 格式
 	
-	2. 使用 AMCAX::NextMesh::NMAPIModel 下的 ImportModel() 导入 cad 文件，新建模型
+	2. 使用 AMCAX::NextMesh::NMAPIModel 下的 ImportModel() 导入 TopoShape
 	
 	3. 使用 AMCAX::NextMesh::NMAPIModel 下的 GenerateMesh() 根据json字符（网格生成控制参数），生成网格
 	
@@ -23,6 +23,6 @@
 
 生成的网格模型如下：
 
-<div align = center><img src="https://s2.loli.net/2024/12/31/oCesITjPFMZqQvw.png" width="400" height="300"></div>
+<div align = center><img src="https://s2.loli.net/2025/02/26/mbN37X8CuGHwSDz.png" width="400" height="300"></div>
 
 

@@ -18,6 +18,7 @@
 #include <modeling/MakeShapeTool.hpp>
 #include <io/STLTool.hpp>
 #include <topology/TopoVertex.hpp>
+#include<common/Constants.hpp>
 int main()
 {//Create a rounded hexagonal prism
     AMCAX::Point3 p1(-80.0, 0.0, 56.0);
@@ -25,7 +26,7 @@ int main()
     int n = 6;
     for (int i = 0; i < n; ++i)
     {
-        double t = M_PI * 2.0 * i / n;
+        double t = AMCAX::Constants::pi * 2.0 * i / n;
         makePolygon.Add(p1.Translated(AMCAX::Vector3(0.0, std::cos(t), std::sin(t)) * 50.0));
     }
     makePolygon.Close();

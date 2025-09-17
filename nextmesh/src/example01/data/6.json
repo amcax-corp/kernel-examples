@@ -37,7 +37,7 @@
     {
       "CurvatureFactor": 1,
       "GrowthRate": 1.0,
-      "MaxSize": 0.5,
+      "MaxSize": 5,
       "MeshingDim": 2,
       "MinSize": 0.1,
       "SelectedEntities": [ 1 ]

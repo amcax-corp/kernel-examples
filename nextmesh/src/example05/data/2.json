@@ -1,0 +1,82 @@
+{
+  "Distribution": [],
+  "BoundaryLayer": [
+    {
+      "DistributionType": "Separation",
+      "EntityType": "Face",
+      "FSPairs": [
+        {
+          "F": 1,
+          "S": 1
+        },
+        {
+          "F": 2,
+          "S": 1
+        },
+        {
+          "F": 3,
+          "S": 1
+        },
+        {
+          "F": 4,
+          "S": 1
+        },
+        {
+          "F": 5,
+          "S": 1
+        },
+        {
+          "F": 6,
+          "S": 1
+        }
+      ],
+      "Basic": {
+        "InitLayerHeight": {
+          "Absolute": 0.1
+        },
+        "GrowthRate": {
+          "Constant": 1.1
+        },
+        "NLayers": 3,
+        "AdditionalOuterLayers": 3,
+        "LastAspect": 0.6,
+        "ProblematicAreasTreatment": "COLLAPSE",
+        "FailureRetainValidLayers": false,
+        "MaxNumberOfConsecutiveCollapsedLayers": [ true, 1 ]
+      },
+      "SideTreatment": {
+        "AutoConnectAngleLimit": true,
+        "ConnectLimitAngle": 60
+      },
+      "VectorTreatment": {
+        "SmoothTopCapShellMesh": true,
+        "SmoothVectors": [ true, 60 ]
+      },
+      "GrowthControls": {
+        "MaxTopFacetEquiareaSkewness": [ true, 0.95 ],
+        "MaxTopFacetWarping": false,
+        "MaxLayerAspect": false,
+        "MaxAllowedAspectProceed": false
+      }
+    }
+  ],
+  "MeshSize": [
+    {
+      "CurvatureFactor": 0.2,
+      "GrowthRate": 1.1,
+      "MaxSize": 1,
+      "MinSize": 0.1,
+      "MeshingDim": 2,
+      "SelectedEntities": []
+    },
+    {
+      "CurvatureFactor": 0.2,
+      "GrowthRate": 1.1,
+      "MaxSize": 1,
+      "MinSize": 0.1,
+      "MeshingDim": 3,
+      "SelectedEntities": []
+    }
+  ],
+  "ThreadNum": 1
+}

@@ -3,6 +3,7 @@
 [![en-us](https://img.shields.io/badge/en-us-yellow.svg)](./README.md) [![中文-简体](https://img.shields.io/badge/%E4%B8%AD%E6%96%87-%E7%AE%80%E4%BD%93-red.svg)](./README.zh_cn.md)
 
 ### This example demonstrates the basic usage of geometric editing. A STEP file is imported, and geometric editing operations are performed on the model using the GeomE API to repair it. The specific steps are as follows:
+#### Note:​​ Before running this example, please extract the FEA.rar file in the data folder to ensure that FEA.brep exists in data.
 
 	1. Use AMCAX::TopoExplorerTool's MapShapes() to get the coordinates of the insertion point and the inserted edge
 	

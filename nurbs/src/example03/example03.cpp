@@ -1,5 +1,6 @@
 ﻿#include <memory>
 #include <vector>
+
 #include <common/PointT.hpp>
 #include <geomAlgo/LawConstant.hpp>
 #include <geometry/Geom3BSplineCurve.hpp>
@@ -10,10 +11,10 @@
 #include <nurbs/NURBSAPIBuildCurve.hpp>
 #include <nurbs/NURBSAPICircularSweep.hpp>
 #include <nurbs/NURBSAPISweep.hpp>
-#include <step/StepWriter.hpp>
-#include <geometry/Geom3BSplineSurface.hpp>
+#include<step/STEPTool.hpp>
 #include <modeling/MakeFace.hpp>
-#include <boolean/BoolBRepFuse.hpp>
+#include<common/Constants.hpp>
+#include <modeling/MakeShapeTool.hpp>
 
 using namespace AMCAX;
 
@@ -75,23 +76,20 @@ void TestPipe()
 	// set the parameters
 	std::vector<double> parameters1 = { 1.0, 1.0 };
 	std::vector<double> parameters2 = { 1.0, 1.0 };
-	std::vector<double> tol = { 0.001, 0.1 * M_PI / 180.0, 0.05 };
+	std::vector<double> tol = { 0.001, 0.1 * AMCAX::Constants::pi / 180.0, 0.05 };
 	std::shared_ptr<AMCAX::Geom3BSplineSurface> blendSurface = AMCAX::NURBSAPIBlend::BlendSurfaces(circlePipe, false, false, AMCAX::ContinuityType::G2, parameters1, complexPipe, false, false, AMCAX::ContinuityType::G2, parameters2, true, true, tol);
 
-
+	// write
 	AMCAX::TopoShape C = MakeFace(blendSurface, 0.0);
 	AMCAX::TopoShape L = MakeFace(sweptSurfaces[0], 0.0);
 	AMCAX::TopoShape R = MakeFace(circlePipe, 0.0);
 
-
-
-	AMCAX::TopoShape result = AMCAX::BoolBRepFuse(L, C);
-	result = AMCAX::BoolBRepFuse(result, R);
-
-	AMCAX::STEP::StepWriter writer("output.step");
-	writer.Init();
-	writer.WriteShape(result);
-	writer.Done();
+	std::list< AMCAX::TopoShape > shapes;
+	shapes.push_back(L);
+	shapes.push_back(C);
+	shapes.push_back(R);
+	AMCAX::TopoShape  result = AMCAX::MakeShapeTool::SewShape(shapes, AMCAX::Precision::Confusion());
+	AMCAX::STEP::STEPTool::Write(result, "output.step");
 }
 
 int main()

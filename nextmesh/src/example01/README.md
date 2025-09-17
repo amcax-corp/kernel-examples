@@ -2,11 +2,11 @@
 
 [![en-us](https://img.shields.io/badge/en-us-yellow.svg)](./README.md) [![中文-简体](https://img.shields.io/badge/%E4%B8%AD%E6%96%87-%E7%AE%80%E4%BD%93-red.svg)](./README.zh_cn.md)
 
-### This tutorial outlines the basic usage of mesh generation. It involves the process of importing STEP format files and automatic generation of the volumetric mesh, which is controlled by parameters specified by a JSON file. The implementation is as follows:
+### This tutorial outlines the basic usage of mesh generation. It involves the process of importing BREP format files and automatic generation of the volumetric mesh, which is controlled by parameters specified by a JSON file. The implementation is as follows:
 
 	1. Use InitLogger() under AMCAX::NextMesh::NMAPIModel to set the log format
 	
-	2. Use ImportModel() under AMCAX::NextMesh::NMAPIModel to import the cad file and create a new NMAPIModel object
+	2. Use ImportModel() under AMCAX::NextMesh::NMAPIModel to import TopoShape
 	
 	3. Use GenerateMesh() under AMCAX::NextMesh::NMAPIModel to mesh generation controlled by the parameters in the json
 	
@@ -37,26 +37,35 @@
 
 The generated mesh model is shown in the figure:
 
-	1. JSON Example (corresponding import files are qiuwotaojian.stp and mesh_para-mesh000.json)
+	1. JSON Example (corresponding import files are qiuwotaojian.brep and mesh_para-mesh000.json)
 
 <div align = center><img src="https://s2.loli.net/2024/08/21/fgE13hGHXuNz29m.png" width="400" height="300"></div>
 
-	2. JSON Example - Planar Boundary Layer (corresponding import files are 2.step and 2.json)
+	2. JSON Example - Planar Boundary Layer (corresponding import files are 2.brep and 2.json)
 
-<div align = center><img src="https://s2.loli.net/2024/11/29/9J2T7fGjuOXQxMe.jpg" width="300" height="250"></div>
+<div align = center><img src="https://s2.loli.net/2025/02/27/U6oPpzBthW2aDSu.png" width="300" height="250"></div>
 
-	3. JSON Example - Spatial Boundary Layer (corresponding import files are 3.step and 3.json)
+	3. JSON Example - Spatial Boundary Layer (corresponding import files are 3.brep and 3.json)
 
-<div align = center><img src="https://s2.loli.net/2024/09/29/hc1jrQLRWPH6s8J.png" width="300" height="250"></div>
+<div align = center><img src="https://s2.loli.net/2025/02/27/mp8Y2gZHB1heKa7.jpg" width="300" height="250"></div>
 
-	4. JSON Example - Sweep mesh (corresponding import files are 4.step and 4.json)
+	4. JSON Example - Sweep mesh (corresponding import files are 4.brep and 4.json)
 
 <div align = center><img src="https://s2.loli.net/2024/12/02/CKA3s8RZzM5ovu7.png" width="300" height="250"></div>
 
-	5. Json示例-Copy mesh（corresponding import files are 5.step and 5.json）
+	5.  JSON Example-Copy mesh（corresponding import files are 5.brep and 5.json）
 
 <div align = center><img src="https://s2.loli.net/2024/12/31/PykwZ7qOGNxHR1l.png" width="300" height="250"></div>
 
-	6. Json示例-Multiple line mesh generation methods（corresponding import files are 6.step and 6.json）
+	6.  JSON Example-Multiple line mesh generation methods（corresponding import files are 6.brep and 6.json）
 
 <div align = center><img src="https://s2.loli.net/2024/12/31/QEWeyAra2iJclK1.png" width="300" height="250"></div>
+
+	7. JSON Example - High-Order Mesh (Corresponding import files: 7.brep and 7.json)
+
+<div align = center><img src="https://s2.loli.net/2025/03/28/WMR9DbmFOUrspwf.png" width="300" height="250"></div>
+
+	8. JSON Example - JSON Example - Template Mesh (The corresponding imported files are 8.brep and 8.json)
+
+<div align = center><img src="https://s2.loli.net/2025/09/10/ElXy5PgkpvI4mcD.png" width="300" height="250"></div>
+

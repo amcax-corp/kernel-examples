@@ -1,79 +1,78 @@
-﻿#include <step/StepReader.hpp>
-#include <step/StepWriter.hpp>
-#include <step/StepDataTool.hpp>
-
+﻿#include <step/STEPStyledReader.hpp>
+#include <step/STEPTool.hpp>
+#include <step/STEPWriter.hpp>
+#include <topology/TopoExplorer.hpp>
 #include <topology/TopoIterator.hpp>
-
 #include <iostream>
 
-void printProductName(const std::shared_ptr<AMCAX::STEP::StepData> node, int indent = 0)
+void printProductName(const std::shared_ptr<AMCAX::STEP::STEPStyledProduct>& node, int indent = 0)
 {
-    for (int i = 0; i < indent; ++i)
-    {
+    for (int i = 0; i < indent; ++i) {
         std::cout << "|   ";
-    }
-    std::cout << node->ProductName() << std::endl;
-    for (const std::shared_ptr<AMCAX::STEP::StepData> child : node->Children())
-    {
-        printProductName(child, indent + 1);
+        if (node->IsShadow()) {
+            std::cout << "SHADOW: " << node->ProductName() << std::endl;
+        }
+        else {
+            std::cout << node->ProductName() << std::endl;
+            for (auto& child : node->Children()) {
+                printProductName(child, indent + 1);
+            }
+        }
     }
 }
 
-void printSubName(const std::shared_ptr<AMCAX::STEP::StepData> node, int indent = 0)
+void printSolidName(const std::shared_ptr<AMCAX::STEP::STEPStyledProduct>& node, int indent = 0)
 {
-    for (int i = 0; i < indent; ++i)
+    for (size_t i = 0; i < node->ShapesSize(); ++i)
     {
-        std::cout << "|   ";
-    }
-    std::unordered_map<AMCAX::TopoShape, std::string> partname = node->PartName();
-    for (const AMCAX::TopoShape& shape : node->Shapes())
-    {
-        for (AMCAX::TopoIterator iter(shape); iter.More(); iter.Next())
+        const auto& origShape = node->ShapeAt(i);
+        const auto& props = node->PropertyAt(i);
+
+        for (AMCAX::TopoExplorer SolidExp(origShape, AMCAX::ShapeType::Solid);
+            SolidExp.More(); SolidExp.Next())
         {
-            if (auto it = partname.find(iter.Value()); it != partname.end())
+            const auto& solid = SolidExp.Current();
+            auto it = props.find(solid);
+            if (it != props.end() && it->second.NameHasValue())
             {
-                std::cout << it->second << std::endl;
-            }
-            else
-            {
-                std::cout << "No PartName" << std::endl;
+                std::string name = it->second.Name();
+                std::cout << '\"' << name << '\"' << std::endl;
             }
         }
     }
 
-    for (const std::shared_ptr<AMCAX::STEP::StepData> child : node->Children())
+    for (auto& child : node->Children())
     {
-        printSubName(child, indent + 1);
+        printSolidName(child, indent + 1);
     }
 }
 
 int main()
 {
-    AMCAX::STEP::StepDataList shapes;
+    std::vector<std::shared_ptr<AMCAX::STEP::STEPStyledProduct>> products;
 
-    AMCAX::STEP::StepReader reader("./data/bed214T.step");
-
-    reader.SetUnit(AMCAX::STEP::StepLengthUnit::PresetLengthUnit::METRE);
+    AMCAX::STEP::STEPStyledReader reader("./data/bed214T.step");
+    reader.SetTargetUnit(AMCAX::STEP::STEPLengthUnit::Presets::METRE);
 
     bool topo_success = reader.Read();
-    if (!topo_success)
-    {
-        return -1;
-    }
+    if (!topo_success) return -1;
 
-    shapes = reader.GetShapes();
+    products = reader.GetProducts();
 
-    for (std::shared_ptr<AMCAX::STEP::StepData> root : shapes)
+    for (auto root : products)
     {
         printProductName(root);
-        printSubName(root);
+        printSolidName(root);
     }
 
-    AMCAX::STEP::StepDataList flatten = AMCAX::STEP::StepDataTool::Flatten(shapes);
+    // 提取整体 Shape
+    AMCAX::TopoShape compound = AMCAX::STEP::STEPTool::MakeCompound(products);
 
-    AMCAX::STEP::StepWriter writer("./output.step");
-    writer.SetUnit(AMCAX::STEP::StepLengthUnit::PresetLengthUnit::METRE);
-    writer.Init();
-    writer.WriteShapes(shapes);
+    // 将树展开为一维数组
+    AMCAX::STEP::STEPTool::FlattenInplace(products);
+
+    AMCAX::STEP::STEPWriter writer("./output.step");
+    writer.SetOutputUnit(AMCAX::STEP::STEPLengthUnit::Presets::METRE);
+    writer.WriteShapes(products);
     writer.Done();
 }

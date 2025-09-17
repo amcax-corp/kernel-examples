@@ -24,15 +24,15 @@
 	
 	9. The result of the scan is stored in circlePipe and a status is returned
 	
-	10. Convert the TopoShape object to a STEP file using AMCAX::STEP::StepWriter
+	10. Convert the TopoShape object to a STEP file using AMCAX::STEP::STEPWriter
 	
-	11. Write the header of the STEP file to the stream using Init() under AMCAX::STEP::StepWriter
+	11. Write the header of the STEP file to the stream using Init() under AMCAX::STEP::STEPWriter
 	
 	12. Convert Geom3BSplineSurface to TopoShape using MakeFace() under AMCAX::MakeFace
 	
-	13. Write the data portion of the STEP file using WriteShape() under AMCAX::STEP::StepWriter
+	13. Write the data portion of the STEP file using WriteShape() under AMCAX::STEP::STEPWriter
 	
-	14. Use Done() under AMCAX::STEP::StepWriter to write the end of the STEP file and close the output file
+	14. Use Done() under AMCAX::STEP::STEPWriter to write the end of the STEP file and close the output file
 
 
 <div align = center><img src="https://s2.loli.net/2024/06/11/lvyrE4oDGNc8ZFa.png" width="600" height="300">

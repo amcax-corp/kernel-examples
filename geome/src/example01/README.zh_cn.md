@@ -3,6 +3,7 @@
 [![en-us](https://img.shields.io/badge/en-us-yellow.svg)](./README.md) [![中文-简体](https://img.shields.io/badge/%E4%B8%AD%E6%96%87-%E7%AE%80%E4%BD%93-red.svg)](./README.zh_cn.md)
 
 ### 该示例展示使用几何编辑的基本用法，导入 step 格式文件，通过调用 GeomE 的 API 对模型进行几何编辑操作对模型进行修复。具体实现如下： 
+#### 注：在执行该示例前，请先将文件夹 data 下的 FEA.rar 解压缩，使得 data 中存在 FEA.brep 文件。
 
 	1. 使用 AMCAX::TopoExplorerTool 下的 MapShapes() 获取插入点的坐标和插入的边
 	

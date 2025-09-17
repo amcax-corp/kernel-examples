@@ -1,0 +1,14 @@
+{
+  "MeshSize": [
+    {
+      "CurvatureFactor": 0.2,
+      "GrowthRate": 1.2,
+      "MaxSize": 1,
+      "MeshingMethod": "AFT",
+      "MeshingDim": 2,
+      "MinSize": 0.1,
+      "SelectedEntities": []
+    }
+  ],
+  "ThreadNum": 1
+}

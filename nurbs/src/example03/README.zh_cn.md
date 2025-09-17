@@ -29,7 +29,7 @@
 	11. 使用 AMCAX::NURBSAPISweep::SweepOneRail 执行沿着脊柱扫一个侧面
 	
 	12. 获取曲面，并存储在 complexPipe 中
-	
+
 ### 2. 构建右侧圆形截面管道
 
 	1. 使用 std::vector<AMCAX::Point3> 定义向量 centerCurvePoles
@@ -63,19 +63,14 @@
 	5. 使用 AMCAX::NURBSAPIBlend 下的 BlendSurfaces() 构造一个连接两个表面的混合表面 blendSurface 
 
 ### 4. 生成 step 文件
-	
+
 	1. 使用 AMCAX::MakeFace 下的 MakeFace() 将 Geom3BSplineSurface 转换成 TopoShape
 	
-	2. 使用 AMCAX::BoolBRepFuse 下的 BoolBRepFuse() 执行布尔融合操作，将三个形状合并成一个
+	2. 使用 AMCAX::MakeShapeTool 下的 SewShape() 将三个形状合并成一个
 	
-	3. 使用 AMCAX::STEP::StepWriter 将 TopoShape 对象转换为 STEP 文件
-	
-	4. 使用 AMCAX::STEP::StepWriter 下的 Init() 将 STEP 文件的头部分写入流
-	
-	5. 使用 AMCAX::STEP::StepWriter 下的 WriteShape() 写入STEP文件的数据部分
-	
-	6. 使用 AMCAX::STEP::StepWriter 下的 Done() 编写 STEP 文件的结束部分，关闭输出文件
-	
+	3. 使用 AMCAX::STEP::STEPTool 下的 Write() 将形状写入文件
+
 
 
 <div align = center><img src="https://s2.loli.net/2024/06/28/2LlvhGrIe6pqbsg.png" width="600" height="300">
+

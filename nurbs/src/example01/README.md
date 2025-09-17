@@ -30,15 +30,15 @@
 	
 	12. Obtain the surface and store it in complexPipe
 	
-	13. Convert the TopoShape object to a STEP file using AMCAX::STEP::StepWriter
+	13. Convert the TopoShape object to a STEP file using AMCAX::STEP::STEPWriter
 	
-	14. Write the header of the STEP file to the stream using Init() under AMCAX::STEP::StepWriter
+	14. Write the header of the STEP file to the stream using Init() under AMCAX::STEP::STEPWriter
 	
 	15. Convert Geom3BSplineSurface to TopoShape using MakeFace() under AMCAX::MakeFace
 	
-	16. Write the data portion of the STEP file using WriteShape() under AMCAX::STEP::StepWriter
+	16. Write the data portion of the STEP file using WriteShape() under AMCAX::STEP::STEPWriter
 	
-	17. Use Done() under AMCAX::STEP::StepWriter to write the end of the STEP file and close the output file
+	17. Use Done() under AMCAX::STEP::STEPWriter to write the end of the STEP file and close the output file
 
 
 

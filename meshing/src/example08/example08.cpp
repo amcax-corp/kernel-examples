@@ -2,12 +2,10 @@
 #include "mesh/io/OBJWriter.hpp"
 #include "meshModeling/MeshParameterization.hpp"
 #include "meshModeling/TriMeshCut.hpp"
-#include "example08.h"
 
 using namespace AMCAX::Meshing;
 using namespace AMCAX::Meshing::Mesh;
 using namespace AMCAX::Meshing::Parameterization;
-
 // Define points and triangles from traits
 using Points = typename TriSoupTraits_Coord::Points;
 using Triangles = typename TriSoupTraits_Coord::Triangles;
@@ -15,16 +13,15 @@ using Triangles = typename TriSoupTraits_Coord::Triangles;
 // Function for parameterization with mesh cut
 void Parameterization_With_MeshCut()
 {
-
     IOOptions io_options;
     io_options.vertex_has_point = true;
 
     OBJReader<TriSoupTraits_Coord> obj_reader;
     OBJWriter<TriSoupTraits_Coord> obj_writer;
 
-    std::string in_filename = "./data/boolean_data/bunny25k.obj";
-    std::string out_cut_filename = "./bunny_cut.obj";
-    std::string out_para_filename ="./bunny_parameterization.obj";
+    std::string in_filename = "./data/bunny25k.obj";
+    std::string out_cut_filename = "bunny_cut.obj";
+    std::string out_para_filename = "bunny_parameterization.obj";
 
     // Read the object file
     obj_reader.read(in_filename, io_options);
@@ -33,8 +30,7 @@ void Parameterization_With_MeshCut()
     Triangles i_triangles = std::move(obj_reader.m_triangles);
 
     // Perform mesh cut
-    AMCAX::Meshing::TriMeshCut::GreedyCut<TriSoupTraits_Coord> mesh_cut(
-        i_points, i_triangles, /*verbose*/ true);
+    AMCAX::Meshing::TriMeshCut::GreedyCut<TriSoupTraits_Coord> mesh_cut(i_points, i_triangles, /*verbose*/ true);
 
     Points    cut_points;
     Triangles cut_triangles;
@@ -50,8 +46,7 @@ void Parameterization_With_MeshCut()
     Points para_points;
 
     // Perform bijective parameterization on the cut mesh
-    AMCAX::Meshing::Parameterization::BijectivePara<TriSoupTraits_Coord> para(
-        cut_points, cut_triangles, para_points, /*verbose*/ true);
+    AMCAX::Meshing::Parameterization::BijectivePara<TriSoupTraits_Coord> para(cut_points, cut_triangles, para_points, /*verbose*/ true);
     para.parameterization();
 
     // Write the parameterized cut mesh to a new file
@@ -63,5 +58,4 @@ void Parameterization_With_MeshCut()
 int main()
 {
     Parameterization_With_MeshCut();
-    return 0;
 }

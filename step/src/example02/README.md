@@ -4,31 +4,29 @@
 
 ### This example shows the basic usage of Mesh Reader. The details are as follows:
 
-	1. Use using AMCAX::STEP::StepMeshReader < AMCAX:: Meshing::Mesh::TriSoupTraits_Coord > create objects reader
+	1. Read the file using Read() under AMCAX::STEP::STEPMeshReader<TriSoupTraits>
 	
-	2. Use using AMCAX::STEP::StepMeshReader < AMCAX::Meshing::Mesh::TriSoupTraits_Coord > under the Read () Read the STEP file
+	2. Obtain the STEPMeshProduct node using GetProducts() under AMCAX::STEP::STEPMeshReader<TriSoupTraits>
 	
-	3. Use using AMCAX::STEP::StepMeshReader < AMCAX::Meshing::Mesh::TriSoupTraits_Coord > GetShapes under () to obtain a list of StepMeshData tree pointer
+	3. Implement in-place transformation of the incoming shapes using ApplyTrsfInplace() under AMCAX::STEP::STEPTool
 	
-	4. Call the function _ApplyTrsfInplace, which transforms the incoming shape in place and stores the result in trsfStack
+	4. Convert the TopoShape object to a Mesh object using ToMesh() under AMCAX::STEP::STEPMeshReader<TriSoupTraits>
 	
-	5. Use using AMCAX::STEP::StepMeshReader < AMCAX::Meshing::Mesh::TriSoupTraits_Coord > ToMesh under () converts TopoShape object to a Mesh object
+	5. Call the func function to recursively traverse the child elements of each element and add the mesh information in meshdata to the meshes vector
 	
-	6. Call the func function, recursively iterate through the child elements of each element, and add the grid information from StepMeshData to the outermost meshes vector
+	6. Declare an io_options object using AMCAX::Meshing::Mesh::IOOptions
 	
-	7. Use AMCAX::Meshing::Mesh::IOOptions declare a io_options object
+	7. Declare points1 and result_points objects using AMCAX::Meshing::Mesh::TriSoupTraits_Coord::Points
 	
-	8. Use Points to specify points1 and result_points
+	8. Declare triangles1 and result_triangles objects using AMCAX::Meshing::Mesh::TriSoupTraits_Coord::Triangles
 	
-	9. Use Triangles to declare the triangles1, result_triangles object
+	9. Declare an stl_writer object using AMCAX::Meshing::Mesh::STLWriter<AMCAX::Meshing::Mesh::TriSoupTraits_Coord>
 	
-	10. Use AMCAX::Meshing::Mesh::STLWriter < AMCAX::Meshing::Mesh::TriSoupTraits_Coord > statement a stl_writer object
+	10. Declare a trianglestmp object using AMCAX::Meshing::Mesh::TriSoupTraits_Coord::Triangles
 	
-	11. Declare a trianglestmp object using Triangles
+	11. Create a tritmp object for adjusting vertex indices
 	
-	12. A triangle object, tritmp, is created to adjust the index of the vertices
-	
-	13. Use AMCAX::Meshing::Mesh::STLWriter < AMCAX::Meshing::Mesh::TriSoupTraits_Coord > under the write () to write grid into the STL file
+	12. Write the mesh to an STL file using write() under AMCAX::Meshing::Mesh::STLWriter<AMCAX::Meshing::Mesh::TriSoupTraits_Coord>
 
 
 <div align = center><img src="https://s2.loli.net/2024/06/12/RjXdmbpAn7UKN1x.png" width="500" height="400">

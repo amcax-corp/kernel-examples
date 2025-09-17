@@ -2,29 +2,26 @@
 #include <nlohmann/json.hpp>
 #include <nextmesh/NMAPIModel.hpp>
 #include <set>
+#include <occtio/OCCTTool.hpp>
 
 using namespace AMCAX::NextMesh;
 
 void GenMesh()
 {
-
-    const std::string cadstr = "./data/qiuwotaojian.stp";
-
     const std::string jsonPath = "./data/mesh_para-mesh000.json";
-
 
     NMAPIModel::InitLogger();
 
-
     NMAPIModel nmapi;
 
-    nmapi.ImportModel(cadstr);
+    AMCAX::TopoShape shape;
+    AMCAX::OCCTIO::OCCTTool::Read(shape, "./data/qiuwotaojian.brep");
+    std::vector<NMShape>shapes = { shape };
+    nmapi.ImportModel(shapes);
 
     nlohmann::json paraJ = nlohmann::json::parse(std::ifstream(jsonPath));
 
-
     nmapi.GenerateMesh(paraJ.dump());
-
 
     auto meshapi = nmapi.GetMesh();
 
@@ -37,11 +34,6 @@ void GenMesh()
         {
             auto eTag = nmapi.EntityGetTag(ent);
             auto dim = nmapi.EntityGetDim(ent);
-
-            std::vector<ElemType> typeVec;
-
-            meshapi.GetEntityElementTypes(typeVec, ent);
-
 
             std::vector<NMEntity> parentVec;
             nmapi.GetParentAdjacentEntities(parentVec, ent);
@@ -67,9 +59,7 @@ void GenMesh()
     }
 
     NMPoint3 pmin, pmax;
-
     nmapi.GetBBox(pmin, pmax);
-
 
     auto elemTotalNum = meshapi.GetElementCount();
     for (size_t i = 0; i < elemTotalNum; i++)
@@ -105,7 +95,6 @@ void GenMesh()
         auto node = meshapi.GetNodeByIndex(i);
     }
 
-
     nmapi.CreatePhysicalSet(DimType::D2, { 1, 2 }, "inlet");
     nmapi.CreatePhysicalSet(DimType::D2, { 3, 4 }, "outlet");
     nmapi.CreatePhysicalSet(DimType::D2, { 5 }, "symmetry");
@@ -116,8 +105,10 @@ void GenMesh()
     std::set<std::string> pNames;
     nmapi.GetPhysicalSets(pNames, DimType::D2);
 
-    meshapi.Write("flmsh.vtk", OutFileType::VTK);
-    meshapi.Write("flmsh.obj", OutFileType::OBJ);
+    meshapi.Write("result.vtk", OutFileType::VTK);
+    meshapi.Write("result.obj", OutFileType::OBJ);
+    meshapi.Write("result.msh", OutFileType::FLUENT_MSH);
+    meshapi.WriteGmsh4("result.msh", false, true);
 }
 
 int main()

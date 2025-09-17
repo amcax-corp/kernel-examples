@@ -24,15 +24,16 @@
 	
 	9. 扫描的结果存储在 circlePipe 中，同时返回一个状态
 	
-	10. 使用 AMCAX::STEP::StepWriter 将 TopoShape 对象转换为 STEP 文件
+	10. 使用 AMCAX::STEP::STEPWriter 将 TopoShape 对象转换为 STEP 文件
 	
-	11. 使用 AMCAX::STEP::StepWriter 下的 Init() 将 STEP 文件的头部分写入流
+	11. 使用 AMCAX::STEP::STEPWriter 下的 Init() 将 STEP 文件的头部分写入流
 	
 	12. 使用 AMCAX::MakeFace 下的 MakeFace() 将 Geom3BSplineSurface 转换成 TopoShape
 	
-	13. 使用 AMCAX::STEP::StepWriter 下的 WriteShape() 写入STEP文件的数据部分
+	13. 使用 AMCAX::STEP::STEPWriter 下的 WriteShape() 写入STEP文件的数据部分
 	
-	14. 使用 AMCAX::STEP::StepWriter 下的 Done() 编写 STEP 文件的结束部分，关闭输出文件
-	
+	14. 使用 AMCAX::STEP::STEPWriter 下的 Done() 编写 STEP 文件的结束部分，关闭输出文件
+
 
 <div align = center><img src="https://s2.loli.net/2024/06/11/lvyrE4oDGNc8ZFa.png" width="600" height="300">
+

@@ -6,31 +6,27 @@
 
 
 
-	1. Define a printProductName function to output a Product tree
-
-	2. Define a printSubName function that outputs the names of all sub-shapes in the Product tree
-
-	3. Use AMCAX::STEP::StepDataList create containers used to store data
-
-	4. Use AMCAX::STEP::StepReader to create shapes for converting STEP files into TopoShape objects
+	1. Define a printProductName function to output the Product tree structure
 	
-	5. Use SetUnit() under AMCAX::STEP::StepReader to set the base unit used when converting STEP to TopoShape. The basic unit for AMCAX::STEP::StepLengthUnit::PresetLengthUnit::was
+	2. Define a printSolidName function to output the names of all Solids in the Product tree
 	
-	6. Read the STEP entity using Read() under AMCAX::STEP::StepReader
+	3. Set the basic unit used when converting STEP to TopoShape using SetTargetUnit() under AMCAX::STEP::STEPStyledReader; the basic unit is AMCAX::STEP::StepLengthUnit::PresetLengthUnit::METRE
 	
-	7. Obtain a list of Pointers to the StepData tree using GetShapes() under AMCAX::STEP::StepReader
+	4. Read the file using Read() under AMCAX::STEP::STEPStyledReader
 	
-	8. Use AMCAX::STEP::StepDataTool::create a StepData Flatten a copy of the tree and its spread into an array
+	5. Obtain the STEPStyledProduct tree list using GetProducts() under AMCAX::STEP::STEPStyledReader
 	
-	9. Convert the TopoShape object to a STEP file using AMCAX::STEP::StepWriter
+	6. Extract the overall Shape using MakeCompound() under AMCAX::STEP::STEPTool
 	
-	10. Use SetUnit() under AMCAX::STEP::StepWriter to set the length unit of the STEP file
+	7. Expand the tree into a one-dimensional array using FlattenInplace() under AMCAX::STEP::STEPTool
 	
-	11. Write the header of the STEP file to the stream using Init() under AMCAX::STEP::StepWriter
+	8. Convert the TopoShape object to a STEP file using AMCAX::STEP::STEPWriter
 	
-	12. Write the data portion of the STEP file using WriteShape() under AMCAX::STEP::StepWriter
+	9. Set the length unit of the STEP file using SetOutputUnit() under AMCAX::STEP::STEPWriter
 	
-	13. Use Done() under AMCAX::STEP::StepWriter to write the end of the STEP file and close the output file
+	10. Write the data part of the STEP file using WriteShapes() under AMCAX::STEP::STEPWriter
+	
+	11. Compose the ending part of the STEP file and close the output file using Done() under AMCAX::STEP::STEPWriter
 
 
 

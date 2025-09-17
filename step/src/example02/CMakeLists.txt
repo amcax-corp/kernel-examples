@@ -10,6 +10,8 @@ set(EXTERNAL_LIBS
     AMCAXMeshing
     AMCAXStep
     AMCAXPart
+    AMCAXAF
+    AMCAXOCCTIO
 )
 
 file(GLOB files "*.cpp")

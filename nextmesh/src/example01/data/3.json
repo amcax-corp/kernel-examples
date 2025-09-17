@@ -3,15 +3,19 @@
   "BoundaryLayer": [
     {
       "DistributionType": "Separation",
-      "EntityType": "Edge",
-      "EFPairs": [
+      "EntityType": "Face",
+      "FSPairs": [
         {
-          "E": 2,
-          "F": 7
+          "F": 1,
+          "S": 1
         },
         {
-          "E": 17,
-          "F": 7
+          "F": 8,
+          "S": 1
+        },
+        {
+          "F": 9,
+          "S": 1
         }
       ],
       "Basic": {
@@ -23,15 +27,11 @@
         },
         "NLayers": 20,
         "ProblematicAreasTreatment": "STOP"
+      },
+      "SideTreatment": {
+        "AutoConnectAngleLimit": true,
+        "ConnectLimitAngle": 60
       }
-    },
-    {
-      "GrowthRate": 1.2,
-      "InitLayerHeight": 0.002,
-      "NLayers": 20,
-      "DistributionType": "Separation",
-      "SelectedEntities": [ 1, 8, 9 ],
-      "EntityType": "Face"
     }
   ],
   "MeshSize": [

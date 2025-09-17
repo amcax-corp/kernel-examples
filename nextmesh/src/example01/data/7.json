@@ -1,0 +1,18 @@
+{
+  "MeshSize": [
+    {
+      "CurvatureFactor": 0.2,
+      "GrowthRate": 1.0,
+      "MaxSize": 5.0,
+      "MeshingDim": 3,
+      "MinSize": 2.0,
+      "SelectedEntities": []
+    }
+  ],
+  "ElementOrder": {
+    "Order": 2,
+    "OnGeom": true,
+    "Serendipity": true
+  },
+  "ThreadNum": 1
+}

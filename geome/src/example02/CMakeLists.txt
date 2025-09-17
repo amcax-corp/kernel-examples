@@ -11,6 +11,7 @@ set(EXTERNAL_LIBS
     AMCAXPart
     AMCAXStep
     AMCAXOCCTIO
+    AMCAXAF
 )
 
 file(GLOB files "*.cpp")

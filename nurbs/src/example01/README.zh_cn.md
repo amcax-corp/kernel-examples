@@ -30,17 +30,18 @@
 	
 	12. 获取曲面，并存储在 complexPipe 中
 	
-	13. 使用 AMCAX::STEP::StepWriter 将 TopoShape 对象转换为 STEP 文件
+	13. 使用 AMCAX::STEP::STEPWriter 将 TopoShape 对象转换为 STEP 文件
 	
-	14. 使用 AMCAX::STEP::StepWriter 下的 Init() 将 STEP 文件的头部分写入流
+	14. 使用 AMCAX::STEP::STEPWriter 下的 Init() 将 STEP 文件的头部分写入流
 	
 	15. 使用 AMCAX::MakeFace 下的 MakeFace() 将 Geom3BSplineSurface 转换成 TopoShape
 	
-	16. 使用 AMCAX::STEP::StepWriter 下的 WriteShape() 写入STEP文件的数据部分
+	16. 使用 AMCAX::STEP::STEPWriter 下的 WriteShape() 写入STEP文件的数据部分
 	
-	17. 使用 AMCAX::STEP::StepWriter 下的 Done() 编写 STEP 文件的结束部分，关闭输出文件
-	
-	
+	17. 使用 AMCAX::STEP::STEPWriter 下的 Done() 编写 STEP 文件的结束部分，关闭输出文件
+
+
+​	
 
 <div align = center><img src="https://s2.loli.net/2024/06/11/12LFs57qNradIBT.png" width="600" height="300">
 
