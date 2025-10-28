@@ -11,20 +11,18 @@ using namespace AMCAX::Meshing::MeshTools;
 
 void MeshRepair_MeshRepair()
 {
-    bool first = true;
-    int  stage;
-    AMCAX::Meshing::MeshTools::TriMeshRepair<TriSoupTraits_Coord>::ProFn pro_fn =
-        [&first, &stage](int _stage, AMCAXMeshing_UNUSED bool& cancel) -> void
+    // Define progress callback function
+    int overall_percent{};  // Overall progress percentage
+    AMCAX::Meshing::Mesh::CbFunc pro_fn =
+        [&overall_percent](int _overall_percent,
+            AMCAXMeshing_UNUSED bool& cancel) -> void
         {
-            stage = _stage;
-            if (!first)
-                std::cout << "\r\033[K";
-            std::cout << "stage: " << _stage << "/" << AMCAX::Meshing::MeshTools::TriMeshRepair<TriSoupTraits_Coord>::Total;
-            first = false;
+            overall_percent = _overall_percent;
+            std::cout << "[Progress] Overall progress: " << overall_percent << "%"
+                << std::endl;
 
-            // set cancel to true if you want to terminate the algorithm :)
-            if (stage == AMCAX::Meshing::MeshTools::TriMeshRepair<
-                TriSoupTraits_Coord>::Stage::Total)
+            // If algorithm termination is needed, set cancel to true
+            if (overall_percent == 100)
                 std::cout << std::endl;
         };
 
@@ -40,9 +38,9 @@ void MeshRepair_MeshRepair()
     TriSoupTraits_Coord::Triangles result_triangles;
 
     stl_reader.read("./data/CamelBox.stl", io_options);
-    TriMeshRepair<TriSoupTraits_Coord> repair(stl_reader.m_points, stl_reader.m_triangles);
+    TriMeshRepair<TriSoupTraits_Coord> repair(stl_reader.m_points, stl_reader.m_triangles, 8, pro_fn);
 
-    repair.repair(true, pro_fn);
+    repair.repair();
 
     stl_writer.m_points = repair.m_points;
     stl_writer.m_triangles = repair.m_triangles;
@@ -54,6 +52,7 @@ void MeshRepair_MeshRepair()
     obj_writer.write("repaired.obj", io_options, 10);
 }
 
-int main() {
+int main()
+{
     MeshRepair_MeshRepair();
 }

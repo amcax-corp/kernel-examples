@@ -108,7 +108,7 @@ void GenMesh()
     meshapi.Write("result.vtk", OutFileType::VTK);
     meshapi.Write("result.obj", OutFileType::OBJ);
     meshapi.Write("result.msh", OutFileType::FLUENT_MSH);
-    meshapi.WriteGmsh4("result.msh", false, true);
+    meshapi.WriteGmsh("result.msh", false, true);
 }
 
 int main()

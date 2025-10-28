@@ -37,7 +37,7 @@ void GenMesh()
 
 	meshapi.Write("result1.vtk", OutFileType::VTK);
 	meshapi.Write("result1.obj", OutFileType::OBJ);
-	meshapi.WriteGmsh4("result1.msh", false, true);
+	meshapi.WriteGmsh("result1.msh", false, true);
 }
 
 int main()

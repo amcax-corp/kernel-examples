@@ -1,0 +1,80 @@
+M
+1     1 .06170524 -1 7 -8 u=1 imp:n=1 $ uo2 fuel
+2     3 .0597516   1 -2 -9 u=1 imp:n=1 $ clad
+3     4 .06006075  -1 8 -9 u=1 imp:n=1 $ top end plug (lower piece)
+4     4 .06006075  -2 9 u=1 imp:n=1 $ top end plug (top piece)
+5     5 .06000711  -1 -7 u=1 imp:n=1 $ lower end plug
+6     2 .100059  2 u=1 imp:n=1 $ water
+7     0  -4 3 -6 5  imp:n=1 lat=1 u=2 fill=1  $ lattice of fuel rods
+8     0 -10 11 -20 21 -22 23 fill=2 imp:n=1  $ rod cluster
+9     0  11 -10 19 -21 23 -22  imp:n=1 fill=1  $ one fuel rod
+10    6 .106563  19 -20 11 -10 -23 29  imp:n=1  $ acrylic support plate
+11    2 .100059 (-11:10:20:-19:22:-29) -24 25 -26 27 -28 30 imp:n=1 $ water
+12    0  24:-25:26:-27:28:-30  imp:n=0
+
+1     c/z 1.016 1.016 .5588  $ fuel cylinder
+2     c/z 1.016 1.016 .635  $ clad cylinder
+3     px  0.0  $ fuel rod cell boundary
+4     px  2.032  $ fuel rod cell boundary
+5     py  0.0  $ fuel rod cell boundary
+6     py  2.032  $ fuel rod cell boundary
+7     pz  0.0  $ bottom of fuel
+8     pz  91.44  $ top of fuel
+9     pz  91.92  $ top of clad
+10    px  40.639  $ farthest edge of closest cluster
+11    px  .0001  $ closest edge of closest cluster
+19    py  0.0001  $ close edge of cluster + one rod 
+20    py  38.6079  $ sides of clusters
+21    py  2.0321  $ side of cluster
+22    pz  96.52  $ top of fuel rod
+23    pz  -1.27  $ bottom of fuel rod
+24    px  70.64  $ side of water reflector
+25    px  -30  $ side of water reflector
+26    py  68.608  $ side of water reflector
+27    py  -30  $ side of water reflector
+28    pz  106.44  $ top of water
+29    pz  -3.81  $ bottom of acrylic support plate
+30    pz  -19.11  $ bottom of water
+
+kcode  1500 1 50 160 50000
+sdef  x=d1 y=d2 z=d3 cel=d4
+si1   0 41
+sp1   0 1
+si2   0 37
+sp2   0 1
+si3   0 92
+sp3   0 1
+si4   l 8
+sp4   v
+print
+c     m1 is UO2 fuel
+m1    92234.50c 2.8563e-6 92235.50c 4.8785e-4 
+      92236.50c 3.5348e-6 92238.50c 2.0009e-2 
+      8016.50c  4.1202e-2
+c     m2 is water
+m2    8016.50c 3.3353e-2  1001.50c 6.6706e-2
+mt2   lwtr.01t
+c     m3 is 6061 Al (clad)
+m3    13027.50c  5.8433e-2  24000.50c  6.2310e-5 
+      29000.50c  6.3731e-5  12000.50c  6.6651e-4
+      25055.50c  2.2115e-5  22000.50c  2.5375e-5
+c     Zn replaced by Cu, below
+      29000.50c  3.0967e-5  14000.50c  3.4607e-4
+      26000.50c  1.0152e-4
+c     m4 is 1100 aluminum (top end plug)
+m4   13027.50c  5.9660e-2  29000.50c  3.0705e-5
+      25055.50c  7.3991e-6
+c       Zn replaced by Cu, below
+      29000.50c  1.2433e-5  14000.50c  2.3302e-4
+      26000.50c  1.1719e-4
+c     m5 is 5052 aluminum (lower end plug)
+m5   13027.50c  5.8028e-2  24000.50c  7.7888e-5
+      29000.50c  1.2746e-5  12000.50c  1.6663e-3
+      25055.50c  1.4743e-5
+c       Zn replaced by Cu, below
+      29000.50c  1.2387e-5  14000.50c  1.2978e-4
+      26000.50c  6.5265e-5
+c     m6 is acrylic (support plate)
+m6    1001.50c 5.6642e-2  6000.50c 3.5648e-2
+      8016.50c 1.4273e-2
+mt6   poly.01t

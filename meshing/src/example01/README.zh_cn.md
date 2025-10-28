@@ -5,7 +5,7 @@
 ### 该示例展示了网格简化算法。具体实现如下：
 
 
-	1. 使用 FastQEM<TriSoupTraits_Coord>::ProFn 定义一个名为 pro_fn 的算法进度回调函数
+	1. 使用 AMCAX::Meshing::Mesh::CbFunc 定义一个名为 pro_fn 的算法进度回调函数
 	
 	2. 使用 OBJReader<TriSoupTraits_Coord> 创建一个 obj_reader 对象
 	
@@ -33,3 +33,4 @@
 <div align = center><img src="https://s2.loli.net/2024/09/30/ap2BmQogE1hvblC.png" width="300" height="300">
 
 <div align = center><img src="https://s2.loli.net/2024/09/30/IsJCGRnuAK2SqTM.png" width="300" height="300">
+

@@ -6,7 +6,7 @@
 
 
 
-	1. 使用 FastQEM<TriSoupTraits_Coord>::ProFn 定义一个名为 pro_fn 的算法进度回调函数
+	1. 使用 AMCAX::Meshing::Mesh::CbFunc 定义一个名为 pro_fn 的算法进度回调函数
 	
 	2. 使用 OBJReader<TriSoupTraits_Coord> 创建一个 obj_reader 对象
 	

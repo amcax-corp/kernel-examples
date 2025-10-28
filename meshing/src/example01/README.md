@@ -5,22 +5,22 @@
 ### This example shows the mesh simplification algorithm. The specific implementation is as follows:
 
 
-	1. Define an algorithm progress callback function named pro_fn using FastQEM<TriSoupTraits_Coord>::ProFn
-
+	1. Define an algorithm progress callback function named pro_fn using AMCAX::Meshing::Mesh::CbFunc
+	
 	2. Create an obj_reader object using OBJReader<TriSoupTraits_Coord>
-
+	
 	3. Create an obj_writer object using the OBJWriter<TriSoupTraits_Coord> command
-
+	
 	4. read OBJ files using read() under OBJReader
-
+	
 	5. Define a fast_qem object using FastQEM<TriSoupTraits_Coord> to receive the vertex and triangle data read by obj_reader
-
+	
 	6. Run elapse_reset() in the Logger to reset the running time
-
+	
 	7. simplify the grid using simplify() under FastQEM<TriSoupTraits_Coord>
-
+	
 	8. Use elapse_reset() in Logger to reset the running time
-
+	
 	9. Use write() under OBJWriter<TriSoupTraits_Coord> to write the simplified grid to a file with the reduced ratio in the file name
 
 ##### The following simplified ratios are 0.01, 0.1, 0.3, 0.6 in order

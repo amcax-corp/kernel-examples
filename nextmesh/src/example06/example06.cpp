@@ -104,7 +104,7 @@ int main()
 
     // Smooth block
     SmoothParam smoothParam;
-    smoothParam.blockIds = { 0 };
+    smoothParam._blockIds = { 0 };
     smoothParam._optimizerType = SmoothType::ENERGY_BASED;
     smoothParam._maxIteration = 5;
     smoothParam._relaxationFactor = 0.3;

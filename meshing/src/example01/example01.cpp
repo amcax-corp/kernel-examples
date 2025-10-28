@@ -10,24 +10,18 @@ using namespace AMCAX::Meshing::Remeshing;
 
 void Remeshing_FastQEM()
 {
-    bool first = true;
-    int  stage, current, total;
-
-    FastQEM<TriSoupTraits_Coord>::ProFn pro_fn =
-        [&first, &stage, &current, &total](int _stage, int _current, int _total,
+    // Define progress callback function
+    int overall_percent{};  // Overall progress percentage
+    AMCAX::Meshing::Mesh::CbFunc pro_fn =
+        [&overall_percent](int _overall_percent,
             AMCAXMeshing_UNUSED bool& cancel) -> void
         {
-            stage = _stage;
-            current = _current;
-            total = _total;
+            overall_percent = _overall_percent;
+            std::cout << "[Progress] Overall progress: " << overall_percent << "%"
+                << std::endl;
 
-            if (!first)
-                std::cout << "\r\033[K"; std::cout << "stage: " << _stage << "/"
-                << FastQEM<TriSoupTraits_Coord>::Total << ", process: " << current
-                << "/" << total;
-            first = false;
-            // set cancel to true if you want to terminate the algorithm
-            if (stage == FastQEM<TriSoupTraits_Coord>::Stage::Total)
+            // If algorithm termination is needed, set cancel to true
+            if (overall_percent == 100)
                 std::cout << std::endl;
         };
 
@@ -39,7 +33,6 @@ void Remeshing_FastQEM()
     obj_reader.read("./data/32770_sf.obj", io_options);
     for (double ratio : {0.01, 0.1, 0.3, 0.6})
     {
-        first = true;
         FastQEM<TriSoupTraits_Coord> fast_qem(obj_reader.m_points, obj_reader.m_triangles);
         Logger::elapse_reset();
         std::thread simplify_thread(

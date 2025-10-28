@@ -1,0 +1,24 @@
+{
+  "MeshSize": [
+    {
+      "CurvatureFactor": 0.2,
+      "GrowthRate": 1.2,
+      "MaxSize": 500,
+      "MeshingMethod": "HexCore",
+      "MaterialPoint": [ -3458, 3016.5, -1498 ],
+      "MeshingDim": 3,
+      "MinSize": 2,
+      "SelectedEntities": []
+    }
+  ],
+  "LocalSizeField": {
+    "BGField": 1,
+    "AutomaticField": {
+      "CurvatureFactor": 0.2,
+      "NarrowRegionResolution2D": 0.5,
+      "GrowthRate": 1.2,
+      "Tag": 1
+    }
+  },
+  "ThreadNum": 1
+}

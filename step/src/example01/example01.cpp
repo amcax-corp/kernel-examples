@@ -35,7 +35,7 @@ void printSolidName(const std::shared_ptr<AMCAX::STEP::STEPStyledProduct>& node,
             auto it = props.find(solid);
             if (it != props.end() && it->second.NameHasValue())
             {
-                std::string name = it->second.Name();
+                std::string name = it->second.GetName();
                 std::cout << '\"' << name << '\"' << std::endl;
             }
         }
