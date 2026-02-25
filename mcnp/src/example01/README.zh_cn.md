@@ -12,7 +12,7 @@
 	
 	4. 使用 AMCAX::TopoBuilder 下的 Add() 将遍历得到的形状添加到一个 Compound 中。
 	
-	5. 使用 AMCAX::Label 下的 FindAllAttributes() 获取标签上的所有属性。
+	5. 使用 AMCAX::Label 下的 FindAttribute() 获取属性。
 	
 	6. 使用 AMCAX::Attribute 下的 GetValue() 获取属性值。
 	

@@ -12,7 +12,7 @@
 	
 	4. Use the Add() method under AMCAX::TopoBuilder to add the traversed shapes to a Compound.
 	
-	5. Use the FindAllAttributes() method under AMCAX::Label to obtain all attributes on the Label.
+	5. Use the FindAttribute() method under AMCAX::Label to obtain attribute.
 	
 	6. Use the GetValue() method under AMCAX::Attribute to obtain the attribute value.
 	
